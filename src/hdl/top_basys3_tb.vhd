@@ -60,10 +60,8 @@ architecture test_bench of top_basys3_tb is
   component top_basys3 is
     port(
         sw		:	in  std_logic_vector(2 downto 0);
-              
               -- LEDs
         led        :    out    std_logic_vector(1 downto 0)
-        
       );
   end component;
  

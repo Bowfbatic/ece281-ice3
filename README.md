@@ -12,15 +12,21 @@ Tested on Vivado 2018.2.
 
 ## GitHub Actions Testbench
 
-You can *optionally* enable Actions on your fork.
+You can _optionally_ enable Actions on your fork.
 
 The workflow uses the [setup-ghdl-ci](https://github.com/ghdl/setup-ghdl-ci) GitHub action
-to run a *nightly* build of [GHDL](https://ghdl.github.io/ghdl/).
+to run a _nightly_ build of [GHDL](https://ghdl.github.io/ghdl/).
 
 First, the workflow uses GHDL to **analyze** all `.vhd` files in `src/hdl/`.
 
-Then it **elaborates** the *any* entity with the name `*_tb`.
+Then it **elaborates** the _any_ entity with the name `*_tb`.
 
 Finally, the workflow **runs** the simulation. If successful then it will quietly exit with a `0` code.
 If any of the `assert` statements fail **with** `severity failure` then GHDL will cease the simulation and exit with non-zero code; this will also cause the workflow to fail.
 Assert statements of other severity levels will be reported, but not fail the workflow.
+
+## Documentation
+
+Consulted with C3C Dillon Blanchard C3C Catherine Nguyen to complete this assignment.
+
+![ICE3_waveform](./ICE3_waveform.png)
